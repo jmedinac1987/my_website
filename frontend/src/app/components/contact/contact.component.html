@@ -1,0 +1,64 @@
+<div class="container pt-5">
+    <h1 id="title-contact" class="pt-5">
+        HOLA!
+    </h1>
+    <div class="row justify-content-md-center">
+        <p class="lead text-justify">
+            Es excelente que desees contactarme, por favor diligencia el siguiente formulario y me contactare contigo vía correo electrónico.
+        </p>
+        <div class="col-md-7" id="form-card">
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        Enviar Mensaje
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()"  #signupForm="ngForm" method="POST">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="email">
+                                Email
+                            </label>
+                            <div class="col-sm-10">
+                              <input class="form-control" [(ngModel)]="form.email" name="email" placeholder="Su dirección email" required type="email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="name">
+                                Nombre
+                            </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" name="name" placeholder="Nombre y primer apellido" [(ngModel)]="form.name" required type="text" >
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="asunto">
+                                Asunto
+                            </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" name="asunto" placeholder="Asunto" [(ngModel)]="form.asunto" required type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" cols="30" name="content" placeholder="Escribe aquí tu mensaje!" [(ngModel)]="form.content" required rows="7">
+                            </textarea>
+                        </div>
+                        <button class="btn btn-success btn-block">
+                            <strong>
+                                Enviar
+                            </strong>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" id="img-card">
+            <p class="lead frase text-justify">
+                "La lectura hace al hombre completo; la conversación, ágil, y el escribir, preciso."
+                <br/>
+                -- Sir Francis Bacon --
+            </p>
+            <img alt="Loading...." class="pt-5" id="img-mail" src="../../../assets/letter-1697604_1280.png">
+        </div>
+    </div>
+</div>
