@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { HttpClientModule } from '@angular/common/http';
 import { EmailService } from './services/email.service';
+import { NgxSpinnerModule } from 'ngx-spinner';//Spinner
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxSpinnerModule,
     SnotifyModule
   ],
   providers: [EmailService, { provide: 'SnotifyToastConfig', useValue: ToastDefaults},

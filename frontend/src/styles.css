@@ -1,10 +1,16 @@
 body{
-	background-image: url('./assets/qbkls.png');
-	font-family: 'Montserrat';
+	background: url(assets/qbkls.png);
 }
 .ng-invalid:not(form){
     border-left: 5px solid red;
 }
 .ng-valid:not(form){
-    border-left: 5px solid #0be881;
+    border-left: 5px solid #42b9dd;
+}
+.active{
+	background-color: #42b9dd;
+	border-radius: 6px;	
+}
+div{
+	font-family: 'Fjalla One', sans-serif;
 }

@@ -1,9 +1,10 @@
-<div class="container pt-5">
+<div class="container pt-5 animated bounceInLeft">
+    
     <h1 id="title-contact" class="pt-5">
         HOLA!
     </h1>
     <div class="row justify-content-md-center">
-        <p class="lead text-justify">
+        <p id="coment-welcome" class="text-justify">
             Es excelente que desees contactarme, por favor diligencia el siguiente formulario y me contactare contigo vía correo electrónico.
         </p>
         <div class="col-md-7" id="form-card">
@@ -14,7 +15,7 @@
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form (ngSubmit)="onSubmit()"  #signupForm="ngForm" method="POST">
+                    <form (ngSubmit)="onSubmit()"  #emailForm="ngForm" method="POST">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="email">
                                 Email
@@ -43,7 +44,7 @@
                             <textarea class="form-control" cols="30" name="content" placeholder="Escribe aquí tu mensaje!" [(ngModel)]="form.content" required rows="7">
                             </textarea>
                         </div>
-                        <button class="btn btn-success btn-block">
+                        <button class="btn btn-primary btn-block" [disabled]="!emailForm.form.valid">
                             <strong>
                                 Enviar
                             </strong>
@@ -61,4 +62,5 @@
             <img alt="Loading...." class="pt-5" id="img-mail" src="../../../assets/letter-1697604_1280.png">
         </div>
     </div>
+    
 </div>
