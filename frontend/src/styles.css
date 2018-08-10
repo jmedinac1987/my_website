@@ -8,8 +8,9 @@ body{
     border-left: 5px solid #42b9dd;
 }
 .active{
-	background-color: #42b9dd;
-	border-radius: 6px;	
+	background-color: purple;
+	border-radius: 6px;		
+	text-align: center;
 }
 div{
 	font-family: 'Fjalla One', sans-serif;

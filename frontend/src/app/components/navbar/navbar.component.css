@@ -1,3 +1,13 @@
 #span{
-  color: #42b9dd;
+  color: #42b9dd; 
+}
+#linkIcon{
+  transform: rotate(-10deg);
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  background-color:purple;  
+}
+#nav{
+  background-color: black;
 }

@@ -1,4 +1,18 @@
-#title-inicio{
-	margin: 20%;
+#profile{
+	height: 300px;
+	width: 300px;	
+}
+#nameH2{
 	text-align: center;
+}
+.ajusteCentral{
+	display: block;
+	float:none;		
+	margin:0 auto;
+	width: 100%;
+}
+#bt{
+	display: block;
+	float:none;
+	margin:0 auto;
 }
