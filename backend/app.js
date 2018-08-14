@@ -14,6 +14,10 @@ let corsOptions = {
 }
 
 // view engine setup
+app.use(express.static(__dirname + '/dist/'));
+app.get('/*',(req, res) =>{
+	res.sendFile(path.join(__dirname,'/dist/index.html'));
+});
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 

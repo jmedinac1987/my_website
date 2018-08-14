@@ -18,7 +18,7 @@
                     <form (ngSubmit)="onSubmit()"  #emailForm="ngForm" method="POST">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="email">
-                                Email
+                                E-mail
                             </label>
                             <div class="col-sm-10">
                               <input class="form-control" [(ngModel)]="form.email" name="email" placeholder="Su dirección email" required type="email">
@@ -29,7 +29,7 @@
                                 Nombre
                             </label>
                             <div class="col-sm-10">
-                                <input class="form-control" name="name" placeholder="Nombre y primer apellido" [(ngModel)]="form.name" required type="text" >
+                                <input minlength="7" class="form-control" name="name" placeholder="Nombre y primer apellido" [(ngModel)]="form.name" required type="text" >
                             </div>
                         </div>
                         <div class="form-group row">

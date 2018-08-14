@@ -1,5 +1,5 @@
-#span{
-  color: #42b9dd; 
+.colorName{
+  color: #42b9dd;
 }
 #linkIcon{
   transform: rotate(-10deg);
