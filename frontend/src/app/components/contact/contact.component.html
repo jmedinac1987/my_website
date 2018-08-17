@@ -21,7 +21,7 @@
                                 E-mail
                             </label>
                             <div class="col-sm-10">
-                              <input class="form-control" [(ngModel)]="form.email" name="email" placeholder="Su dirección email" required type="email">
+                              <input class="form-control" [(ngModel)]="form.email" name="email" placeholder="Su dirección e-mail" required type="email">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -29,7 +29,7 @@
                                 Nombre
                             </label>
                             <div class="col-sm-10">
-                                <input minlength="7" class="form-control" name="name" placeholder="Nombre y primer apellido" [(ngModel)]="form.name" required type="text" >
+                                <input minlength="7" maxlength="30" class="form-control" name="name" placeholder="Nombre y primer apellido" [(ngModel)]="form.name" required type="text" >
                             </div>
                         </div>
                         <div class="form-group row">
@@ -37,11 +37,11 @@
                                 Asunto
                             </label>
                             <div class="col-sm-10">
-                                <input class="form-control" name="asunto" placeholder="Asunto" [(ngModel)]="form.asunto" required type="text">
+                                <input minlength="3" maxlength="30" class="form-control" name="asunto" placeholder="Asunto" [(ngModel)]="form.asunto" required type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" cols="30" name="content" placeholder="Escribe aquí tu mensaje!" [(ngModel)]="form.content" required rows="7">
+                            <textarea minlength="3" class="form-control" cols="30" name="content" placeholder="Escribe aquí tu mensaje!" [(ngModel)]="form.content" required rows="7">
                             </textarea>
                         </div>
                         <button class="btn btn-primary btn-block" [disabled]="!emailForm.form.valid">

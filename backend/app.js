@@ -8,16 +8,16 @@ const cors = require('cors');
 
 let app = express();
 let corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: ['http://localhost:4200', 'https://jorgemedina.herokuapp.com'],
   methods: ['POST'],
   allowedHeaders: ['Content-Type', 'application/json']
 }
 
 // view engine setup
-app.use(express.static(__dirname + '/dist/'));
+/*app.use(express.static(__dirname + '/dist/'));
 app.get('/*',(req, res) =>{
 	res.sendFile(path.join(__dirname,'/dist/index.html'));
-});
+});*/
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
