@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailService } from '../../services/email.service';
 import { SnotifyService } from 'ng-snotify';
-import { NgxSpinnerService } from 'ngx-spinner';//spinner
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +8,7 @@ import { NgxSpinnerService } from 'ngx-spinner';//spinner
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  showSpinner: boolean;
 
   public form = {
   	email: null,
@@ -23,13 +23,13 @@ export class ContactComponent implements OnInit {
 
   private list_white_server_email: String[] = ["gmail", "hotmail", "yahoo", "outlook"];  
 
-  constructor(private emailService: EmailService, private notify: SnotifyService, private spinner: NgxSpinnerService) { }
+  constructor(private emailService: EmailService, private notify: SnotifyService) { }
 
   ngOnInit() {
   }
 
   onSubmit(){
-    this.spinner.show();
+    this.showSpinner = true;
     if (this.validateEmail(this.form.email)){
       this.emailService.sendEmailWebsite(this.form).subscribe(data => {
         this.handleData(data);        
@@ -37,14 +37,14 @@ export class ContactComponent implements OnInit {
         this.handleError(error);        
       });
     }else{      
-      this.spinner.hide();  
+      this.showSpinner = false;
       let message = "Lo sentimos :S, por favor suministre una cuenta email valida";
       this.notify.error(message, this.timeout);  
     }
   }
 
   handleError(error){          
-    this.spinner.hide();  
+    this.showSpinner = false;  
     if (error.status === 0) {        
       this.notify.error('Lo sentimos en este momento no podemos procesar su solicitud',this.timeout);  
     }else{           
@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
   }
 
   handleData(data){
-    this.spinner.hide();  
+    this.showSpinner = false;  
     this.notify.success(data.message,this.timeout);          
     this.form = {
       email: null,

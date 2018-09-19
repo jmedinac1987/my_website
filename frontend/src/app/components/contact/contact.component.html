@@ -1,9 +1,9 @@
 <div class="container pt-4 animated bounceInLeft">
-    
-    <h1 id="title-contact" class="pt-5">
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+    <h1 *ngIf="!showSpinner" id="title-contact" class="pt-5">
         HOLA!
     </h1>
-    <div class="row justify-content-md-center">
+    <div *ngIf="!showSpinner" class="row justify-content-md-center">
         <p id="coment-welcome" class="text-justify">
             Es excelente que desees contactarme, por favor diligencia el siguiente formulario y me contactare contigo vía correo electrónico.
         </p>
