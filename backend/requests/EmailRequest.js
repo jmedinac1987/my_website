@@ -1,3 +1,5 @@
+'use strict';
+
 const Joi = require('joi');
 const regular_expression = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const list_white_server_email = ["gmail", "hotmail", "yahoo", "outlook"];
