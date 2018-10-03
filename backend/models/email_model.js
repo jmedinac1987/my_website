@@ -1,7 +1,7 @@
 'use strict';
 
 const nodemailer = require("nodemailer");
-const configuration = require("../configuration/config.json");
+const configuration = require("../configuration/config");
 const email = {};
 
 email.sendEmail = async (req) => {
