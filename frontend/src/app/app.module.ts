@@ -18,6 +18,7 @@ import { ExperienceComponent } from './components/about/experience/experience.co
 import { EducationComponent } from './components/about/education/education.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ProjectsComponent } from './components/about/projects/projects.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ExperienceComponent,
     EducationComponent,
     NotFoundComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
