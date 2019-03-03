@@ -6,10 +6,11 @@ const email = {};
 
 email.sendEmail = async (req) => {
     let transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: "smtp.mailtrap.io",
+        port: 2525,
         auth: {
-            user: configuration.email, 
-            pass: configuration.key 
+            user: configuration.emailMailtrap, 
+            pass: configuration.keyMailtrap 
         }
     });
     let mail_options = {
