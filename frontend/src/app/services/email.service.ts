@@ -9,7 +9,7 @@ export class EmailService {
   private url_base: string;
 
   constructor(private http: HttpClient) {
-  	this.url_base = 'http://localhost:3000/api/sendEmail';
+  	this.url_base = 'https://localhost:3000/api/sendEmail';
   }
 
   sendEmailWebsite(form){
