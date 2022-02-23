@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
     timeout: 5000
   }
 
-  private list_white_server_email: String[] = ["gmail", "hotmail", "yahoo", "outlook"];  
+//  private list_white_server_email: String[] = ["gmail", "hotmail", "yahoo", "outlook"];  
 
   constructor(private emailService: EmailService, private notify: SnotifyService) { }
 
@@ -66,9 +66,10 @@ export class ContactComponent implements OnInit {
   validateEmail (email) {
     let regular_expression = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (regular_expression.test(email)) {
-        let emailString = email.split('@');
-        let servidor_email = emailString[1].split('.');
-        return (this.list_white_server_email.indexOf(servidor_email[0])) > -1 ? true : false;
+        //let emailString = email.split('@');
+        //let servidor_email = emailString[1].split('.');
+        return true;
+        //return (this.list_white_server_email.indexOf(servidor_email[0])) > -1 ? true : false;
     } else {
         return false;
     }
